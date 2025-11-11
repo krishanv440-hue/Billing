@@ -1,0 +1,139 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.invoice-container {
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.shop-header {
+  text-align: center;
+}
+.shop-header h2 {
+  color: green;
+  margin: 0;
+}
+.shop-header p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* Bill header layout */
+.bill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.bill-left {
+  flex: 1 1 45%;
+}
+.bill-right {
+  flex: 1 1 45%;
+  text-align: left;
+}
+
+.bill-left input {
+  display: block;
+  margin: 5px 0;
+  width: 95%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background: #e9ecef;
+}
+
+/* Input section */
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+.input-section input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.input-section button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Totals */
+.totals {
+  text-align: right;
+  margin-top: 15px;
+}
+.totals p, .totals h3 {
+  margin: 4px 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+#reset { background: #f44336; color: white; }
+#print { background: #28a745; color: white; }
+#sendMsg { background: #25D366; color: white; } /* WhatsApp green */
+
+/* Footer */
+.invoice-footer {
+  margin-top: 30px;
+  font-size: 14px;
+}
+.invoice-footer .signature {
+  text-align: right;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bill-header { flex-direction: column; }
+  .bill-right { text-align: left; }
+  .input-section input { flex: 1 1 100%; }
+  .input-section button { width: 100%; }
+}

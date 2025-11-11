@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sri Maruthi Agency - Billing System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="invoice-container">
+
+    <!-- 🏪 Permanent Header -->
+    <div class="shop-header">
+      <h2>SRI MARUTHI AGENCY</h2>
+      <p>2/300, METTUPALAYAM ROAD, KUMARAPURA, N.S.N PALAYAM [POST], COIMBATORE - 641031</p>
+      <p><strong>MOBILE:</strong> 9940899006, 9689220820 |</p>
+         <strong>Email:</strong> srimaruthibce31@gmail.com</p>
+      <p><strong>GSTIN:</strong> 33CCXPS9111B1ZF</p>
+      <hr />
+    </div>
+
+    <!-- 📋 Customer & Invoice Details -->
+    <div class="bill-header">
+      <!-- Left Side -->
+      <div class="bill-left">
+        <h4>Billing To,</h4>
+        <input type="text" id="custName" placeholder="Customer Name" />
+        <input type="text" id="custAddress" placeholder="Customer Address" />
+        <input type="text" id="custPhone" placeholder="Phone Number" />
+      </div>
+
+      <!-- Right Side -->
+      <div class="bill-right">
+        <p><strong>Invoice No:</strong> <span id="invoiceNo">001/24-25</span></p>
+        <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+        <p><strong>Mode of Payment:</strong>
+          <select id="paymentMode">
+            <option value="Cash">Cash</option>
+            <option value="GPay">GPay</option>
+            <option value="PhonePe">PhonePe</option>
+            <option value="Card">Card</option>
+            <option value="Credit">Credit</option>
+            <option value="UPI">UPI</option>
+          </select>
+        </p>
+        <p><strong>State Name:</strong> Tamil Nadu, Code: 33</p>
+      </div>
+    </div>
+
+    <!-- 🧮 Billing Table -->
+    <table id="billTable">
+      <thead>
+        <tr>
+          <th>S.No</th>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Rate (₹)</th>
+          <th>Tax (%)</th>
+          <th>Amount (₹)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- ➕ Add Item -->
+    <div class="input-section">
+      <input type="text" id="itemName" placeholder="Item Description">
+      <input type="number" id="itemQty" placeholder="Qty" min="1">
+      <input type="number" id="itemPrice" placeholder="Rate (₹)" min="0">
+      <input type="number" id="itemTax" placeholder="Tax (%)" min="0" value="18">
+      <button id="addItem">Add Item</button>
+    </div>
+
+    <!-- 💰 Totals -->
+    <div class="totals">
+      <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+      <p>SGST @9%: ₹<span id="sgst">0.00</span></p>
+      <p>CGST @9%: ₹<span id="cgst">0.00</span></p>
+      <h3>Grand Total: ₹<span id="grandTotal">0.00</span></h3>
+    </div>
+
+    <!-- 🧾 Buttons -->
+    <div class="buttons">
+      <button id="reset">New Bill</button>
+      <button id="print">Print Invoice</button>
+      <button id="sendMsg">Send WhatsApp</button>
+    </div>
+
+    <!-- ⚖️ Footer -->
+    <div class="invoice-footer">
+      <p><strong>Terms & Conditions:</strong> Goods once sold cannot be taken back or exchanged.</p>
+      <p>Subject to Coimbatore Jurisdiction Only.</p>
+      <p class="signature">For <strong>Sri Maruthi Agency</strong><br>Authorized Signature</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
